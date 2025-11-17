@@ -7,7 +7,7 @@ const repoCount = 50
 
 const gameName = new String('sarfrazalam') // another way of string declear
 
-// Function
+// Method of js
 
 // console.log(gameName[0]); //key value pair answer is "s"
 // console.log(gameName.__proto__);  //answer is "object"
