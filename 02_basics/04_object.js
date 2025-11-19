@@ -55,15 +55,32 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); // its giver user all keys
-console.log(Object.values(tinderUser)); // its gives user all value in array formate 
-console.log(Object.entries(tinderUser)); // its convert all key value into array
+// console.log(Object.keys(tinderUser)); // its giver user all keys
+// console.log(Object.values(tinderUser)); // its gives user all value in array formate 
+// console.log(Object.entries(tinderUser)); // its convert all key value into array
 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); //when you want to check user have a Porpertise 
-// its give answer in a boolen like True or false 
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); //when you want to check user have a Porpertise 
+// its give answer in a boolen like True or false
+
+
+// D=structuring of Object Importent Toppic its usesfull
+
+const course = {
+    coursename: "js in hindi",
+    price:"999",
+    courseInstructor: "sarfraz"
+}
+
+//course.courseInstructor - its another way to construct 
+
+const {courseInstructor} = course
+console.log(courseInstructor);
+
+
+
 
 
 
