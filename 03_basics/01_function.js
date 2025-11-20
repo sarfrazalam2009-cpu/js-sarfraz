@@ -66,9 +66,58 @@ function loginUserMessage(username){
     return  `${username} just logged in`
 }
 
-console.log(loginUserMessage())
+//console.log(loginUserMessage())
 
 
 //Note : if you doesnot whant to check ki user are passing value or not 
 // then you will declear ther value first then answer are not showing undefined 
 // example : pass the value first on username = "sarfraz"
+
+
+// function calculateCartPrice(num1){
+//     return num1
+
+// }
+// console.log(calculateCartPrice(200));
+
+// when user passes lot of value then Rest oprater used rest oprator symnol is three dot like ...
+// case 1
+function calculateCartPrice(...num1){
+    return num1
+
+}
+console.log(calculateCartPrice(200, 400, 500));
+
+// case 2
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+
+}
+console.log(calculateCartPrice(200, 400, 500, 2000));
+// answer is [500, 2000] 
+// 200 is gone in val1 & 400 is gone in val2
+
+const user = {
+    username: "sarfraz",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    
+}
+//handleObject(user)
+
+// also pass new value in object
+handleObject({
+    username: "sam",
+    price: 399
+})
+
+
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray));
