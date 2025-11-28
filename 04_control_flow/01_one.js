@@ -35,6 +35,17 @@
 //   console.log("temperature is grater then 50");  
 // }
 
+// const temperature = 40
+// if(temperature != 50){
+//     console.log("temperature is not equal to 50");
+//     if (temperature < 50) {
+//         console.log("temperature is less then 50");
+        
+//     }
+// }else{
+//     console.log("temperature is equal to 50");
+    
+// }
 // const temperature = 41
 
 // if( temperature === 40 ){
