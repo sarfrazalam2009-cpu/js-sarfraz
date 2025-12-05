@@ -95,26 +95,40 @@ span {
 
 ```javascript
 console.log("sarfraz")
-const buttons = document.querySelectorAll('.button')
-const body = document.querySelector("body")
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+const heading = document.querySelector('.heading1');
+const heading01 = document.querySelector('.heading2');
 
 buttons.forEach(function (button){
   console.log(button);
-  button.addEventListener('click', function(e){
-  console.log(e)
-  console.log(e.target)
-  if(e.target.id === 'grey'){
-    body.style.backgroundColor = e.target.id
-  }
-  if(e.target.id === 'white'){
-    body.style.backgroundColor = e.target.id
-  }
-  if(e.target.id === 'blue'){
-    body.style.backgroundColor = e.target.id
-  }
-  if(e.target.id === 'yellow'){
-    body.style.backgroundColor = e.target.id
-  }
+  button.addEventListener('click',function (e){
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'grey') {
+      body.style.backgroundColor = e.target.id;
+      document.getElementById("heading1").style.color = "#fff";
+      document.getElementById("heading2").style.color = "#fff"
+    }
+    if (e.target.id === 'white') {
+      body.style.backgroundColor = e.target.id;
+      document.getElementById("heading1").style.color = "red"; 
+      document.getElementById("heading2").style.color = "black"
+    }
+    if (e.target.id === 'blue'){
+      body.style.backgroundColor = e.target.id;
+      document.getElementById("heading1").style.color = "white"; 
+      document.getElementById("heading2").style.color = "white"
+    }
+    if (e.target.id === 'yellow') {
+      body.style.backgroundColor = e.target.id;
+      document.getElementById("heading1").style.color =
+      "maroon"
+      document.getElementById("heading2").style.color = "maroon"
+
+    }
+
   });
+
 });
 ```
