@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Event</title>
+</head>
+<body style="background-color:#414141;color:  aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id ="photoshop" src="https://images.pexels.com/photos/35189529/pexels-photo-35189529.jpeg" 
+                alt="photoshop"></li>
+            <li><img width="200px" id ="fount" src="https://images.pexels.com/photos/35189509/pexels-photo-35189509.jpeg" 
+                alt=""></li>
+            <li><img width="200px" id ="river" src="https://images.pexels.com/photos/35189563/pexels-photo-35189563.jpeg" 
+                alt=""></li>
+            <li><img width="200px" id ="nature" src="https://images.pexels.com/photos/35189472/pexels-photo-35189472.jpeg" 
+                alt=""></li>
+            <li><img width="200px" id ="lamp" src="https://images.pexels.com/photos/35189489/pexels-photo-35189489.jpeg" 
+                alt=""></li>
+            <li><a style="color: aliceblue" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // 1st approch
+    // document.getElementById("nature").onclick = function(){
+    //     alert("nature clicked")
+    // }
+
+    //2nd and best approch
+    // document.getElementById("nature").addEventListener('click', function(){
+    //     alert("nature clicked again")
+
+    // },false)
+
+     // 3rd aproch
+    //attachEvent() its use early when enternet explore used
+    //jQuery - on
+
+     // **** some usefull event ****//
+        // type - keyboad or mouse event 
+        // timestamp - use for date activity
+        // defaultPrevented - it used to stop default event 
+        // toElement , srcElement , currentTarget 
+        // clientX , clientY , screenX , screenY
+        // altKey , ctrlKey , shiftKey , keyCode
+
+    // **** Event propogation use ***** // 
+    // 1. Event bubbling use as -  false its default value 
+    // 2. Event capturing use as - true 
+
+
+    // Event object used 
+
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("clicked inside the ul")     
+       
+    //  },false)
+    // document.getElementById("nature").addEventListener('click', function(e){
+    //     console.log("nature clicked")
+    //     e.stopPropagation()          
+    //  },false)
+
+    //  document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+        
+    //  },false)
+
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()
+    //     // removeIt.parentNode.removeChild(removeIt)
+
+    // },false)
+
+
+      document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()  
+
+        }
+        
+
+    },false)
+
+</script>
+</html>
