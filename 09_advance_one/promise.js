@@ -1,3 +1,8 @@
+// Promise
+//.then() = response comes 
+//.cathc() = error comes 
+//.finally() = response and error both are come in finally 
+
 
 const promiseOne = new Promise(function(resolve, reject){
     // Do an async task
